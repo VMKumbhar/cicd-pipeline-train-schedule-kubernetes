@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: python
+  name: python
+  namespace: development
+spec:
+  ports:
+    port: 5000
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    app: python
+  type: LoadBalancer
